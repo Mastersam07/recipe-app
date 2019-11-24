@@ -2,10 +2,25 @@ language: python
 python:
   - "3.6"
 
+addons:
+    code_climate:
+        repo_token: 89d9aa84b39a2a2c82cf27e0b03c349311d84b5cf1d65f7dc8ef9dea48cf8b34
+
 services:
   - docker
+
+before_install:
+  - python --version
+  - pip install codecov
+
+install:
+  - pip install coverage
+  - pip install codeclimate-test-reporter
 
 before_script: pip install docker-compose
 
 script:
   - docker-compose run --rm app sh -c "python manage.py test && flake8"
+
+after_success:
+  - codeclimate-test-reporter
