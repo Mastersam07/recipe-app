@@ -2,10 +2,6 @@ language: python
 python:
   - "3.6"
 
-env:
-  global:
-    - CC_TEST_REPORTER_ID=89d9aa84b39a2a2c82cf27e0b03c349311d84b5cf1d65f7dc8ef9dea48cf8b34
-
 services:
   - docker
 
@@ -23,4 +19,4 @@ script:
   - docker-compose run --rm app sh -c "python manage.py test && flake8"
 
 after_success:
-  - codeclimate-test-reporter
+  - CODECLIMATE_REPO_TOKEN=89d9aa84b39a2a2c82cf27e0b03c349311d84b5cf1d65f7dc8ef9dea48cf8b34 codeclimate-test-reporter
