@@ -1,4 +1,4 @@
-FROM python:3.7-alpine
+FROM python:3-alpine
 MAINTAINER Mastersam
 
 ENV PYTHONUNBUFFERED 1
@@ -12,5 +12,5 @@ RUN mkdir /app
 WORKDIR /app
 COPY ./app/ /app
 
-RUN adduser -D user
-USER user
+RUN adduser -D mastersam
+USER mastersam
