@@ -4,3 +4,4 @@ coverage>=4.5.4,<4.6.0
 flake8>=3.7.9,<3.9.0
 codeclimate-test-reporter>=0.2.3,<0.3
 psycopg2>=2.8.4,<2.9.0
+virtualenv>=16.7.8,<17.0.0
