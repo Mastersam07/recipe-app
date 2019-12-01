@@ -1,8 +1,8 @@
 [run]
 omit =
     */migrations/*,
-    */tests.py
-    manage.py
+    */tests.py,
+    manage.py,
     app/wsgi.py
 
 source =
