@@ -17,6 +17,7 @@ install:
   - pip install coverage
   - pip install codeclimate-test-reporter
   - pip install coveralls
+  - pip install django
 
 before_script: pip install docker-compose
 
